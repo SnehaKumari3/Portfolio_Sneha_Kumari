@@ -1,0 +1,31 @@
+.scroll_container {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    margin-right: 9px;
+    overflow: hidden;
+    flex-direction: column;
+    margin-top: -45px;
+    z-index: 100;
+    cursor: pointer;
+  }
+  
+  .btn_scroll {
+    width: 50px;
+    height: 50px;
+    color: aliceblue;
+    font-size: 24px;
+    background-color: #F64C72;
+    border-radius: 10px;
+    border: none;
+  }
+  .btn_scroll i:hover {
+    color: black;
+  }
+  @media only screen and (min-width: 475px) {
+    .scroll_container {
+      margin-bottom: 10px;
+    }
+  }
+  
+  

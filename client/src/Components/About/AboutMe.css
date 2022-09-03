@@ -1,0 +1,83 @@
+.aboutme_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+}
+.aboutme_parent{
+    max-width: 1000px;
+    width: 70%;
+}
+.aboutme_card{
+    display: flex;
+    width: 100%;
+    box-shadow: 0 0px 30px -2px #242582;
+}
+.aboutme_profile{
+    width: 50%;
+    background-image: url('../../assets/Images/Sneha_pic\ .jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.aboutme_details{
+    width: 48%;
+    text-align: justify;
+    padding: 30px;
+}
+.aboutme_description{
+    font-size: 16px;
+}
+.aboutme_highlights{
+    margin: 50px 0;
+}
+.highlight_heading{
+    font-family: "Poppins Bold";
+    font-size: 15px;
+    margin: 0 0 5px 0;
+}
+.highlight{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.highlight_blob{
+    height: 12px;
+    width: 12px;
+    margin: 0 10px 0 0;
+    background-color: #F64C72;
+    border-radius: 50%;
+}
+
+.aboutme_options .highlighted_btn{
+    margin: 0 0 0 30px;
+}
+
+@media only screen and (max-width: 1110px){
+    .aboutme_parent{
+        width: 88%;
+    }
+}
+@media only screen and (max-width: 898px){
+    .aboutme_profile{
+        display: none;
+    }
+    .aboutme_details{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 466px){
+    .aboutme_options{
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutme_options .highlighted_btn{
+        margin: 24px 0 0 0;
+    }
+    .aboutme_options button{
+        width: 100%;
+    }
+}

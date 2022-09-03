@@ -1,0 +1,61 @@
+.product_section{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: fit-content;
+  margin: 120px 0;
+}
+.container{
+    display: flex;
+    height: 450px;
+    width: 1200px;
+}
+.project_card {
+  background: #fff;
+  padding: 0px 0px;
+  margin: 50px 15px 90px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0px 20px -2px #553D67;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+.project_ss{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.slider-card img {
+  border-radius: 5px 5px 0px 0px;
+}
+.project_card h5{
+  margin-bottom: 2px;
+  text-align: center;
+}
+.project_card h5 b{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.project_card h5 i{
+  color: black;
+  cursor: pointer;
+}
+.project_card h5 i:hover{
+  transform: scale(1.2);
+  color: #F64C72;
+}
+.project_card .project_tech{
+  padding: 1px;
+  text-align: center;
+  color: #242582;
+}
+.project_card .project_details{
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
