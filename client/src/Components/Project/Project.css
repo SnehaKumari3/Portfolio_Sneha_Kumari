@@ -24,14 +24,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 
 .slider-card img {
   border-radius: 5px 5px 0px 0px;
 }
 .project_card h5{
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   text-align: center;
 }
 .project_card h5 b{
@@ -47,7 +47,7 @@
   color: #F64C72;
 }
 .project_card .project_tech{
-  padding: 1px;
+  padding: 5px;
   text-align: center;
   color: #242582;
 }
