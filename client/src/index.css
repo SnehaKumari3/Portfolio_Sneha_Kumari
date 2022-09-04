@@ -89,6 +89,7 @@ body ::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition: 0.2s;
   font-family: "Poppins SemiBold";
+  box-shadow: 0 0px 15px -2px #553D67;
 }
 
 .btn:active {
@@ -107,7 +108,6 @@ body ::-webkit-scrollbar-thumb {
   color: black;
   background-color: white;
   border: 2px solid #553D67;
-  box-shadow: 0 0px 15px -2px #553D67;
 }
 
 .highlighted-btn {
@@ -118,7 +118,6 @@ body ::-webkit-scrollbar-thumb {
 .highlighted-btn:hover{
   background-color: white;
   border: 2px solid #F64C72;
-  box-shadow: 0 0px 15px -2px #553D67;
 }
 @media only screen and (max-width: 568px) {
   .highlighted-btn {

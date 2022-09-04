@@ -94,17 +94,16 @@ form button{
     font-size: 12px;
     border-radius: 19px;
     background-color: #242582;
+    box-shadow: 0 0px 15px -2px #553D67;
     font-size: 18px;
     width: 160px;
     align-items: center;
     justify-content: center;
 }
 form button:hover{
-    background-color: #F64C72;
-    box-shadow: 0 0px 15px -2px #553D67;
+    background-color: white;
     transition: all ease 1s;
     color: black;
-    border: 2px solid #242582;
 }
 button .load{
     width: 100%;
