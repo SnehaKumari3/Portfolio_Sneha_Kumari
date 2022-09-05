@@ -15,7 +15,7 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTANTS = {
     description:
-      "I am an undergraduate student at National Institite of Technology Patna, pursuing B-tech in Computer Science and Engineering. I am a coding enthusiast with strong knowledge of Data Structures and Algorithms and also having experience in web development. My interests include competitive programming, Public speaking, dairy-writing and teaching. Strive to be the best version of myself everyday.",
+      "I am an undergraduate student at National Institute of Technology Patna, pursuing B-tech in Computer Science and Engineering. I am a coding enthusiast with strong knowledge of Data Structures and Algorithms and also having experience in web development. My interests include competitive programming, Public speaking, dairy-writing and teaching. Strive to be the best version of myself everyday.",
     highlights: {
       bullets: [
         "Project Head at IEEE Stunet Branch NIT Patna",
