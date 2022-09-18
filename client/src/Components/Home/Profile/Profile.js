@@ -58,7 +58,7 @@ export default function Profile() {
             <button className="btn primary-btn" onClick={()=>ScrollService.scrollHandler.scrollToContactMe()}> Contact Me </button>
             <a
               href="https://drive.google.com/file/d/10L5EP6cQJl52IaDAkZQnbRrJ7N74nYsc/view?usp=sharing"
-              download="Sneha_Resume.pdf"
+              download="Sneha_Resume.pdf" target="_blank"
             >
               <button className="btn highlighted-btn">My Resume</button>
             </a>
