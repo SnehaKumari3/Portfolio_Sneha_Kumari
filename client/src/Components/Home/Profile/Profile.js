@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Component } from 'react';
 import Typical from "react-typical";
 import "./profile.css";
 import ScrollService from "../../../utilities/ScrollService";
+
 
 export default function Profile() {
   return (
@@ -43,9 +44,10 @@ export default function Profile() {
                     1000,
                     "Web Developer 🌐",
                     1000,
-                    "Sophomore 🚀",
+                    "Junior 🚀",
                     1000,
                   ]}
+                  
                 />
               </h1>
               <span className="profile_role_tagline">
@@ -57,7 +59,7 @@ export default function Profile() {
           <div className="profile_options">
             <button className="btn primary-btn" onClick={()=>ScrollService.scrollHandler.scrollToContactMe()}> Contact Me </button>
             <a
-              href="Sneha_Kumari_Resume.pdf"
+              href="https://drive.google.com/file/d/10L5EP6cQJl52IaDAkZQnbRrJ7N74nYsc/view"
               download="Sneha Sneha_Resume.pdf"
             >
               <button className="btn highlighted-btn">My Resume</button>

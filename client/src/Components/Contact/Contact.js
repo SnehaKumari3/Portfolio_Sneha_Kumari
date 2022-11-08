@@ -1,14 +1,14 @@
-import React,{useState} from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Typical from "react-typical";
-import axios from 'axios';
-import {toast} from 'react-toastify';
 import imgBack from "../../assets/Images/mail.png";
-import load1 from "../../assets/Images/load2.gif"
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import Footer from "../Footer/Footer";
 import "./Contact.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact(props) {
   let fadeInScreenHandler = (screen) => {
@@ -18,53 +18,37 @@ export default function Contact(props) {
 
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
-  const [name,setName]=useState("");
-  const [email,setEmail]=useState("");
-  const [message,setMessage]=useState("");
-  const [banner,setBanner]=useState("");
-  const [bool,setBool]=useState(false);
-
-
-  const handleName = (e)=>{
-    setName(e.target.value);
+  const SuccessToast = () => {
+    toast.success("Send Succesfully!!", {
+      position: "top-right",
+    });
   };
-  const handleEmail = (e)=>{
-    setEmail(e.target.value);
+  const ErrorToast = () => {
+    toast.error("Message not sent", {
+      position: "top-right",
+    });
   };
-  const handleMessage = (e)=>{
-    setMessage(e.target.value);
-  };
+  const form = useRef();
 
-  const submitForm = async(e)=>{
+  const sendEmail = (e) => {
     e.preventDefault();
-    try{
-      let data={
-        name,
-        email,
-        message,
-      };
-      setBool(true)
-      const res = await axios.post(`/contact`,data);
-      if(name.length === 0 || email.length === 0 || message.length === 0){
-        setBanner(res.data.msg)
-        toast.error(res.data.msg)
-        setBool(false)
-      }
-      else if(res.status === 200){
-        setBanner(res.data.msg)
-        toast.success(res.data.msg)
-        setBool(false)
-
-        setName("");
-        setEmail("");
-        setMessage("");
-      }
-
-    }catch (error) {
-      console.log(error)
-    }
-    
+    emailjs
+      .sendForm(
+        "service_agtntcb",
+        "template_uc6z8sg",
+        form.current,
+        "8Nde_ygkX2C4dAZVh"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          SuccessToast();
+        },
+        (error) => {
+          console.log(error.text);
+          ErrorToast();
+        }
+      );
   };
 
   return (
@@ -76,8 +60,7 @@ export default function Contact(props) {
           <h2 className="title">
             <Typical
               loop={Infinity}
-              steps={["Get In Touch 📧", 1000,
-              "Say Hello 👋", 1000]}
+              steps={["Get In Touch 📧", 1000, "Say Hello 👋", 1000]}
             />
           </h2>{" "}
           <a href="#">
@@ -91,35 +74,29 @@ export default function Contact(props) {
           </a>
         </div>
         <div className="back_form">
-            <div className="img_back">
-                <h4>Want to collabrate on some project, Send Your Mail Here 👉</h4>
-                <img src={imgBack} alt="poor connection"/>
+          <div className="img_back">
+            <h4>Want to collabrate on some project, Send Your Mail Here 👉</h4>
+            <img src={imgBack} alt="poor connection" />
+          </div>
+          <form ref={form} onSubmit={sendEmail}>
+            <label>Name</label>
+            <input type="text" name="user_name" required />
+            <label>Email</label>
+            <input type="email" name="user_email" required />
+            <label>Message</label>
+            <textarea name="message" required />
+            <div className="send_btn">
+              <button type="submit">
+                Send
+                <i className="fa fa-paper-plane" />
+              </button>
             </div>
-            <form onSubmit={submitForm}>
-                <p>{banner}</p>
-                <label htmlFor='name'>Name</label>
-                <input type='text'
-                onChange={handleName} value={name}/>
-                <label htmlFor='email'>Email</label>
-                <input type='email' onChange={handleEmail} value={email}/>
-                <label htmlFor='message'>Message</label>
-                <textarea  type='text' onChange={handleMessage} value={message}/>
-
-                <div className="send_btn">
-                    <button type="submit">
-                        Send
-                        <i className="fa fa-paper-plane" />
-                        {bool ? (
-                        <b className="load">
-                          <img src={load1} alt="poor connection"/>
-                        </b>):("")}
-                    </button>
-                </div>
-            </form>
-
+          </form>
         </div>
       </div>
-      <Footer/>
+      <ToastContainer />
+
+      <Footer />
     </div>
   );
 }

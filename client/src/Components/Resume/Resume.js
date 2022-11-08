@@ -37,7 +37,7 @@ export default function Resume(props) {
           <div className="resume_heading_description">
             <span>{props.description ? props.description : ""}</span>
           </div>
-        
+          
       </div>
     );
   };
@@ -186,7 +186,7 @@ export default function Resume(props) {
         />
         <ResumeHeading
           heading="Competitive Programming"
-          description="- Problem Solving is something that fascinates me a lot.I have been practicing competitive Coding for the last six months and have solved more than 1000 questions on different coding platforms like Leetcode, Codeforces, Codechef, and Hackerrank."
+          description="- Problem Solving is something that fascinates me a lot. I have been practicing competitive Coding for the last one year and have solved more than 1000 questions on different coding platforms like Leetcode, Codeforces, Codechef, and Hackerrank."
         />
         <ResumeHeading
           heading="Listening Audio Books and Music"
