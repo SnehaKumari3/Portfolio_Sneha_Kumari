@@ -84,7 +84,7 @@ export default function Contact(props) {
             <label>Email</label>
             <input type="email" name="user_email" required />
             <label>Message</label>
-            <textarea name="message" required />
+            <textarea name="message" />
             <div className="send_btn">
               <button type="submit">
                 Send
