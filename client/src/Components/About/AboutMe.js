@@ -18,10 +18,10 @@ export default function AboutMe(props) {
       "I am an undergraduate student at National Institite of Technology Patna, pursuing B-tech in Computer Science and Engineering. I am a coding enthusiast with strong knowledge of Data Structures and Algorithms and also having experience in web development. My interests include competitive programming, Public speaking, dairy-writing and teaching. Strive to be the best version of myself everyday.",
     highlights: {
       bullets: [
-        "Project Head at IEEE Stunet Branch NIT Patna",
-        "Web Developer at Incubation Center NITP Patna",
+        "Mentor at IEEE Stunet Branch NIT Patna",
+        "Web Cordinator at Incubation Center NITP Patna",
         "Management Commitee member at NSS NIT Patna",
-        "Mathematics Teacher at Ikash Education",
+        "Former Mathematics Teacher at Ikash Education",
       ],
       heading: "Positions / Responsibilities:",
     },
@@ -30,15 +30,17 @@ export default function AboutMe(props) {
   const renderHighlight = () => {
     return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
       <div className="highlight" key={i}>
-        <div className="highlight_blob">
-        </div>
+        <div className="highlight_blob"></div>
         <span>{value}</span>
       </div>
     ));
   };
 
   return (
-    <div className="aboutme_container screen_container fade_in" id={props.id || ""}>
+    <div
+      className="aboutme_container screen_container fade_in"
+      id={props.id || ""}
+    >
       <div className="aboutme_parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
         <div className="aboutme_card">
@@ -54,10 +56,17 @@ export default function AboutMe(props) {
               {renderHighlight()}
             </div>
             <div className="aboutme_options">
-              <button className="btn primary-btn" onClick={()=>ScrollService.scrollHandler.scrollToContactMe()}> Contact Me </button>
+              <button
+                className="btn primary-btn"
+                onClick={() => ScrollService.scrollHandler.scrollToContactMe()}
+              >
+                {" "}
+                Contact Me{" "}
+              </button>
               <a
-              href="https://drive.google.com/file/d/10L5EP6cQJl52IaDAkZQnbRrJ7N74nYsc/view"
-              download="Sneha Sneha_Resume.pdf" target="blank"
+                href="https://drive.google.com/file/d/1p6vco3RaQN0c75U5VgV47p1u04Vls2EF/view?usp=drive_link"
+                download="Sneha Sneha_Resume.pdf"
+                target="blank"
               >
                 <button className="btn highlighted-btn">My Resume</button>
               </a>

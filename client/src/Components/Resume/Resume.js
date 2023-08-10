@@ -101,7 +101,7 @@ export default function Resume(props) {
       <ResumeHeading
         heading={"National Institute of Technology, Patna"}
         subHeading={"B-Tech in Computer Science and technology"}
-        description={"- CGPA : 9.24/10.0"}
+        description={"- CGPA : 9.20/10.0"}
         fromDate={"2020-"}
         toDate={"2024"}
       />
@@ -123,28 +123,28 @@ export default function Resume(props) {
     
     <div className="resume_screen_container" key="work_experience">
       <div className="experience_container">
+        
         <ResumeHeading
+        heading={"Technical Intern at Piramal Finance"}
+        subHeading={"Tools & technologies used: ReactJs, Material-UI, SpringBoot, Thymeleaf"}
+        description={"-  worked on the frontend of a project called Test-Assure, which aimed to ease the testing process, and show statistics related to test cases. Added an admin panel that provided comprehensive reports for each developer. Developed an algorithm to generate all possible test cases for a given json schema and implemented the user interface for the project called Test-Data-Generator using Thymeleaf."}
+        fromDate={"May, 2023 - "}
+        toDate={"July, 2023"}
+        />
+        {/* <ResumeHeading
         heading={"IEEE Student Branch, NIT Patna"}
-        subHeading={"Project Head"}
+        subHeading={"Mentor"}
         description={"- IEEE Student Branch NIT Patna is a technical student welfare club under IEEE Kolkata section R-10. I have contributed to the official website, made some project and conducted many events."}
         fromDate={"July, 2021 - "}
         toDate={"present"}
         />
         <ResumeHeading
-        heading={"National Scheme services, NIT Patna"}
-        subHeading={"Management Commitee Member"}
-        description={"- The National Service Scheme (NSS) is a Central Sector Scheme of the Government of India, Ministry of Youth Affairs & Sports. Being an active volunteer, have conducted more than 20+ events in the last two year and have served more than 360 hours."}
-        fromDate={"April, 2021 - "}
-        toDate={"present"}
-        />
-        
-        <ResumeHeading
         heading={"Incubation Center, NIT Patna"}
-        subHeading={"Web Developer"}
+        subHeading={"Web Cordinator"}
         description={"- web team member of the official website of Incubation Center, NIT Patna"}
         fromDate={"Aug, 2021 - "}
         toDate={"present"}
-        />
+        /> */}
       </div>
     </div>,
 

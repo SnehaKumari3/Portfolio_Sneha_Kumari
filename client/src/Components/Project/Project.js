@@ -47,7 +47,7 @@ export default function Project(props) {
       <section className="project_section fade_in" id={props.id || ""}>
         <ScreenHeading
           title={"Projects"}
-          subHeading={"Some of my cool projects"}
+          subHeading={"Some of my projects"}
         />
         <div className="container">
             <OwlCarousel
